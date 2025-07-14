@@ -1,0 +1,3 @@
+C:/Users/drank/CLionProjects/mediFetchCpp/cmake-build-debug/CMakeFiles/mediFetchCpp.dir
+C:/Users/drank/CLionProjects/mediFetchCpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/drank/CLionProjects/mediFetchCpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
