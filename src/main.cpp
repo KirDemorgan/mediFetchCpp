@@ -25,34 +25,6 @@ std::wstring escape_json(const std::wstring& s) {
     return ss.str();
 }
 
-void CreateHtmlFile() {
-    std::wofstream file("../../track.html");
-    file.imbue(std::locale(file.getloc(), new std::codecvt_utf8<wchar_t>));
-    if (file.is_open()) {
-        file << L"<!DOCTYPE html>"
-             << L"<html><head><meta charset=\"UTF-8\">"
-             << L"<title>Now Playing</title>"
-             << L"<style>"
-             << L"@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');"
-             << L"body { background-color: rgba(0, 0, 0, 0); margin: 0; padding: 0; font-family: 'Roboto', sans-serif; color: white; text-shadow: 2px 2px 4px #000000; }"
-             << L".container { position: fixed; bottom: 20px; left: 20px; background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; width: 350px; }"
-             << L"#title { font-size: 24px; font-weight: 700; }"
-             << L"#artist { font-size: 18px; font-weight: 400; }"
-             << L"</style>"
-             << L"<script>"
-             << L"function updateTrack() { fetch('track.json?t=' + new Date().getTime()).then(response => response.json()).then(data => { document.getElementById('title').innerText = data.title; document.getElementById('artist').innerText = data.artist; }).catch(err => console.error(err)); }"
-             << L"setInterval(updateTrack, 1000);"
-             << L"window.onload = updateTrack;"
-             << L"</script>"
-             << L"</head><body>"
-             << L"<div class=\"container\">"
-             << L"<div id=\"title\">...</div>"
-             << L"<div id=\"artist\">...</div>"
-             << L"</div>"
-             << L"</body></html>";
-    }
-}
-
 void CreateJsonFile(const std::wstring& title, const std::wstring& artist) {
     std::wofstream file("../../track.json");
     file.imbue(std::locale(file.getloc(), new std::codecvt_utf8<wchar_t>));
