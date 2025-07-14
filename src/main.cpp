@@ -51,7 +51,6 @@ int main()
     std::wstring currentTitle = L"";
     std::wstring currentArtist = L"";
     
-    CreateHtmlFile();
     CreateJsonFile(L"Nothing is playing", L"...");
 
     while (true) {
