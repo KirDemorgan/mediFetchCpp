@@ -3,11 +3,11 @@
 #include <string>
 #include <sstream>
 #include <locale>
+#include <codecvt>
 
 using namespace winrt;
 using namespace Windows::Media::Control;
 
-// Function to replace special characters in JSON
 std::wstring escape_json(const std::wstring& s) {
     std::wstringstream ss;
     for (auto c : s) {
@@ -25,9 +25,9 @@ std::wstring escape_json(const std::wstring& s) {
     return ss.str();
 }
 
-// Create or update the HTML file for OBS
 void CreateHtmlFile() {
     std::wofstream file("../../track.html");
+    file.imbue(std::locale(file.getloc(), new std::codecvt_utf8<wchar_t>));
     if (file.is_open()) {
         file << L"<!DOCTYPE html>"
              << L"<html><head><meta charset=\"UTF-8\">"
@@ -53,16 +53,14 @@ void CreateHtmlFile() {
     }
 }
 
-// Create or update the JSON file with track info
 void CreateJsonFile(const std::wstring& title, const std::wstring& artist) {
     std::wofstream file("../../track.json");
+    file.imbue(std::locale(file.getloc(), new std::codecvt_utf8<wchar_t>));
     if (file.is_open()) {
-        file.imbue(std::locale("", std::locale::ctype));
         file << L"{ \"title\": \"" << escape_json(title) << L"\", \"artist\": \"" << escape_json(artist) << L"\" }";
     }
 }
 
-// Main function
 int main()
 {
     init_apartment();
@@ -85,7 +83,6 @@ int main()
     CreateJsonFile(L"Nothing is playing", L"...");
 
     while (true) {
-        std::wcout << L"[LOG] Loop start" << std::endl;
         try {
             auto session = gsmtc.GetCurrentSession();
             if (session) {
@@ -113,7 +110,6 @@ int main()
                 CreateJsonFile(currentTitle, currentArtist);
             }
         }
-        std::wcout << L"[LOG] Loop end, sleeping..." << std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 
