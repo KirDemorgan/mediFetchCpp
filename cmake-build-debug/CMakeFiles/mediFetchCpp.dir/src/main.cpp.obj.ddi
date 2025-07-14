@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\mediFetchCpp.dir\\src\\main.cpp.obj",
+            "outputs": [
+                "C:\\Users\\drank\\CLionProjects\\mediFetchCpp\\cmake-build-debug\\vc140.pdb",
+                "CMakeFiles\\mediFetchCpp.dir\\src\\main.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

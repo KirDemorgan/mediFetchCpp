@@ -49,23 +49,23 @@ cmake_ninja_workdir = C$:\Users\drank\CLionProjects\mediFetchCpp\cmake-build-deb
 
 build cmake_object_order_depends_target_mediFetchCpp: phony || .
 
-build CMakeFiles\mediFetchCpp.dir\main.cpp.obj.ddi: CXX_SCAN__mediFetchCpp_Debug C$:\Users\drank\CLionProjects\mediFetchCpp\main.cpp || cmake_object_order_depends_target_mediFetchCpp
-  DEP_FILE = CMakeFiles\mediFetchCpp.dir\main.cpp.obj.ddi.d
-  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\mediFetchCpp.dir\main.cpp.obj.ddi
+build CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.ddi: CXX_SCAN__mediFetchCpp_Debug C$:\Users\drank\CLionProjects\mediFetchCpp\src\main.cpp || cmake_object_order_depends_target_mediFetchCpp
+  DEP_FILE = CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.ddi
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
-  OBJ_FILE = CMakeFiles\mediFetchCpp.dir\main.cpp.obj
-  PREPROCESSED_OUTPUT_FILE = CMakeFiles\mediFetchCpp.dir\main.cpp.obj.ddi.i
+  OBJ_FILE = CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.ddi.i
 
-build CMakeFiles\mediFetchCpp.dir\main.cpp.obj: CXX_COMPILER__mediFetchCpp_scanned_Debug C$:\Users\drank\CLionProjects\mediFetchCpp\main.cpp | CMakeFiles\mediFetchCpp.dir\main.cpp.obj.modmap || cmake_object_order_depends_target_mediFetchCpp CMakeFiles\mediFetchCpp.dir\CXX.dd
-  DYNDEP_MODULE_MAP_FILE = CMakeFiles\mediFetchCpp.dir\main.cpp.obj.modmap
+build CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj: CXX_COMPILER__mediFetchCpp_scanned_Debug C$:\Users\drank\CLionProjects\mediFetchCpp\src\main.cpp | CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.modmap || cmake_object_order_depends_target_mediFetchCpp CMakeFiles\mediFetchCpp.dir\CXX.dd
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.modmap
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -std:c++20 -MDd -Zi
   OBJECT_DIR = CMakeFiles\mediFetchCpp.dir
-  OBJECT_FILE_DIR = CMakeFiles\mediFetchCpp.dir
+  OBJECT_FILE_DIR = CMakeFiles\mediFetchCpp.dir\src
   TARGET_COMPILE_PDB = CMakeFiles\mediFetchCpp.dir\
   TARGET_PDB = mediFetchCpp.pdb
   dyndep = CMakeFiles/mediFetchCpp.dir/CXX.dd
 
-build CMakeFiles\mediFetchCpp.dir\CXX.dd | C$:\Users\drank\CLionProjects\mediFetchCpp\cmake-build-debug\CMakeFiles\mediFetchCpp.dir\CXXModules.json CMakeFiles\mediFetchCpp.dir\main.cpp.obj.modmap: CXX_DYNDEP__mediFetchCpp_Debug CMakeFiles\mediFetchCpp.dir\main.cpp.obj.ddi | C$:\Users\drank\CLionProjects\mediFetchCpp\cmake-build-debug\CMakeFiles\mediFetchCpp.dir\CXXDependInfo.json
+build CMakeFiles\mediFetchCpp.dir\CXX.dd | C$:\Users\drank\CLionProjects\mediFetchCpp\cmake-build-debug\CMakeFiles\mediFetchCpp.dir\CXXModules.json CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.modmap: CXX_DYNDEP__mediFetchCpp_Debug CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj.ddi | C$:\Users\drank\CLionProjects\mediFetchCpp\cmake-build-debug\CMakeFiles\mediFetchCpp.dir\CXXDependInfo.json
 
 
 # =============================================================================
@@ -75,7 +75,7 @@ build CMakeFiles\mediFetchCpp.dir\CXX.dd | C$:\Users\drank\CLionProjects\mediFet
 #############################################
 # Link the executable mediFetchCpp.exe
 
-build mediFetchCpp.exe: CXX_EXECUTABLE_LINKER__mediFetchCpp_Debug CMakeFiles\mediFetchCpp.dir\main.cpp.obj
+build mediFetchCpp.exe: CXX_EXECUTABLE_LINKER__mediFetchCpp_Debug CMakeFiles\mediFetchCpp.dir\src\main.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Ob0 /Od /RTC1 -MDd -Zi
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
